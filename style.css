@@ -55,18 +55,55 @@ body {
 	text-decoration: none;
 }
 .card {
+	background-image: url(world.jpg);
 	background-color: chocolate;
-
 	grid-area: card;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .image {
-	height: 60px;
+	height: 300px;
 	width: 90%;
+	margin-top: 1rem;
 	background-color: lightcoral;
+	border-radius: 10px;
+	box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+button {
+	padding: 1rem 2rem;
+	border-radius: 15px;
+	outline: none;
+	font-size: 2rem;
+}
+
+.quit {
 }
 
 .score {
 	background-color: greenyellow;
 	grid-area: score;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter {
+	text-align: center;
+	line-height: 3rem;
+	font-size: 2rem;
+	height: 3rem;
+	width: 3rem;
+	border: 2px solid grey;
 }
