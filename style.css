@@ -23,40 +23,42 @@ body {
 	width: 90%;
 	margin: auto;
 	background-color: ivory;
+	opacity: 0.7;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: 100px repeat(3, 1fr);
 	grid-template-areas:
-		'sidebar title title title' 'sidebar card card score'
+		'sidebar title title score' 'sidebar card card score'
 		'sidebar card card score' 'sidebar card card score';
 }
 
 .title {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-size: 3rem;
+	font-size: 1.5rem;
 	color: rgb(6, 6, 51);
 	text-align: center;
-	background-color: hotpink;
+	background-color: rgba(202, 191, 34, 0.5);
 	grid-area: title;
 	margin: 0;
 }
 
 .sidebar {
-	background-color: cyan;
 	grid-area: sidebar;
 	font-size: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	text-align: center;
+	background-color: rgba(202, 191, 34, 0.5);
 }
 
 .sidebar a {
 	text-decoration: none;
+	color: black;
 }
 .card {
 	background-image: url(world.jpg);
-	background-color: chocolate;
+
 	grid-area: card;
 	display: flex;
 	flex-direction: column;
@@ -67,10 +69,20 @@ body {
 .image {
 	height: 300px;
 	width: 90%;
+	background-image: url(../images/china.jpg);
+	background-size: 100%;
+	background-position: center;
 	margin-top: 1rem;
-	background-color: lightcoral;
+
 	border-radius: 10px;
 	box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+input {
+	width: 200px;
+	height: 2rem;
+	border-radius: 10px;
+	font-size: 2rem;
 }
 
 .actions {
@@ -87,16 +99,13 @@ button {
 	font-size: 2rem;
 }
 
-.quit {
-}
-
 .score {
-	background-color: greenyellow;
 	grid-area: score;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: rgba(202, 191, 34, 0.5);
 }
 
 .counter {
