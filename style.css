@@ -116,3 +116,66 @@ button {
 	width: 3rem;
 	border: 2px solid grey;
 }
+
+@media screen and (max-width: 400px) {
+	button {
+		padding: 0;
+	}
+
+	input {
+		width: 80px;
+	}
+
+	.image {
+		height: 100px;
+	}
+
+	.title {
+		font-size: 0.8rem;
+	}
+	.sidebar {
+		width: 0;
+	}
+
+	.score {
+		width: 0;
+	}
+
+	.card {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	button {
+		padding: 0;
+	}
+
+	input {
+		width: 100px;
+	}
+
+	.image {
+		height: 150px;
+	}
+
+	.title {
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 900px) {
+	button {
+		padding: 0.5;
+	}
+
+	input {
+		width: 130px;
+	}
+
+	.image {
+		height: 190px;
+	}
+
+	.title {
+		font-size: 1rem;
+	}
+}
