@@ -5,6 +5,7 @@ html {
 }
 
 body {
+	color: rgb(4, 4, 39);
 	background-image: linear-gradient(
 			to right,
 			rgba(25, 78, 194, 0.3),
@@ -40,6 +41,25 @@ body {
 	background-color: rgba(202, 191, 34, 0.5);
 	grid-area: title;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.your-score {
+	display: none;
+	justify-self: flex-end;
+	align-self: flex-end;
+	margin-bottom: -3rem;
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	color: rgb(4, 4, 39);
+}
+
+.your-score span {
+	color: red;
+	font-size: inherit;
 }
 
 .sidebar {
@@ -54,7 +74,7 @@ body {
 
 .sidebar a {
 	text-decoration: none;
-	color: black;
+	color: rgb(4, 4, 39);
 }
 .card {
 	background-image: url(world.jpg);
@@ -69,19 +89,19 @@ body {
 .image {
 	height: 300px;
 	width: 90%;
-	background-image: url(../images/china.jpg);
+	/* background-image: url(); */
 	background-size: 100%;
 	background-position: center;
 	margin-top: 1rem;
 
-	border-radius: 10px;
-	box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	box-shadow: 0px 0 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 input {
 	width: 200px;
 	height: 2rem;
-	border-radius: 10px;
+	border-radius: 5px;
 	font-size: 2rem;
 }
 
@@ -93,10 +113,17 @@ input {
 }
 
 button {
-	padding: 1rem 2rem;
+	color: rgb(4, 4, 39);
+	padding: 1em 2em;
 	border-radius: 15px;
 	outline: none;
-	font-size: 2rem;
+	font-size: inherit;
+	outline: none;
+}
+button:hover {
+	color: white;
+	background-color: rgb(4, 4, 39);
+	outline: none;
 }
 
 .score {
@@ -117,9 +144,13 @@ button {
 	border: 2px solid grey;
 }
 
+.hide {
+	display: none;
+}
+
 @media screen and (max-width: 400px) {
 	button {
-		padding: 0;
+		padding: 0.7rem;
 	}
 
 	input {
@@ -133,25 +164,26 @@ button {
 	.title {
 		font-size: 0.8rem;
 	}
-	.sidebar {
-		width: 0;
-	}
-
-	.score {
-		width: 0;
-	}
-
-	.card {
-		width: 100%;
-	}
 }
 @media screen and (max-width: 700px) {
-	button {
-		padding: 0;
+	.sidebar,
+	.score {
+		display: none;
 	}
 
-	input {
-		width: 100px;
+	.your-score {
+		display: block;
+		justify-self: flex-end;
+		align-self: flex-end;
+		margin-bottom: 1rem;
+		margin-right: 1rem;
+		font-size: 1.5rem;
+		color: rgb(27, 26, 26);
+	}
+
+	.your-score span {
+		color: red;
+		font-size: inherit;
 	}
 
 	.image {
@@ -161,8 +193,22 @@ button {
 	.title {
 		font-size: 1rem;
 	}
+
+	.container {
+		height: 90vh;
+		width: 90%;
+		margin: auto;
+		background-color: ivory;
+		opacity: 0.7;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-areas:
+			'title title ' 'card card '
+			'card card ' 'card card';
+	}
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 701px) and (max-width: 900px) {
 	button {
 		padding: 0.5;
 	}
@@ -177,5 +223,12 @@ button {
 
 	.title {
 		font-size: 1rem;
+	}
+
+	button {
+		padding: 0.6em 1.2em;
+		border-radius: 15px;
+		outline: none;
+		font-size: inherit;
 	}
 }

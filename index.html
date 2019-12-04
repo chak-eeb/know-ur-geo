@@ -6,11 +6,17 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>🌍 Know-ur-Geo 🌎</title>
 		<link rel="stylesheet" href="style.css" />
+		<!-- <style>
+			.image {
+				background-image: url(../images/australia.jpeg);
+			}
+		</style> -->
 	</head>
 	<body>
 		<div class="container">
 			<div class="title">
 				<h1>Know-Your-Geo</h1>
+				<p class="your-score">Your score is: <span id="counter">0</span></p>
 			</div>
 			<div class="sidebar">
 				<a href="#">Countries</a>
@@ -19,14 +25,17 @@
 			</div>
 
 			<div class="card">
-				<div class="image"></div>
+				<div>
+					<img class="image" id="pic" alt="image" />
+				</div>
 				<h3>Enter the name of the country</h3>
-				<input type="text" />
+				<input id="value" type="text" />
 
 				<div class="actions">
-					<button class="quit">Quit</button>
-					<button class="play">Submit</button>
-					<button class="next">Next</button>
+					<button id="quit">Quit</button>
+					<button id="start" onClick="start()">Start</button>
+					<button id="submit">Submit</button>
+					<button id="next">Next</button>
 				</div>
 			</div>
 			<div class="score">
