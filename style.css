@@ -86,9 +86,14 @@ body {
 	align-items: center;
 }
 
-.image {
-	height: 300px;
+.card-image {
+	height: 40%;
 	width: 90%;
+}
+
+.image {
+	height: 100%;
+	width: 100%;
 	/* background-image: url(); */
 	background-size: 100%;
 	background-position: center;
@@ -102,7 +107,8 @@ input {
 	width: 200px;
 	height: 2rem;
 	border-radius: 5px;
-	font-size: 2rem;
+	font-size: 1rem;
+	color: rgb(155, 153, 146);
 }
 
 .actions {
@@ -114,7 +120,7 @@ input {
 
 button {
 	color: rgb(4, 4, 39);
-	padding: 1em 2em;
+	padding: 1rem 2rem;
 	border-radius: 15px;
 	outline: none;
 	font-size: inherit;
@@ -124,6 +130,12 @@ button:hover {
 	color: white;
 	background-color: rgb(4, 4, 39);
 	outline: none;
+}
+
+.correct {
+	color: green;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 .score {
@@ -186,9 +198,9 @@ button:hover {
 		font-size: inherit;
 	}
 
-	.image {
+	/* .image {
 		height: 150px;
-	}
+	} */
 
 	.title {
 		font-size: 1rem;
@@ -217,9 +229,9 @@ button:hover {
 		width: 130px;
 	}
 
-	.image {
+	/* .image {
 		height: 190px;
-	}
+	} */
 
 	.title {
 		font-size: 1rem;
