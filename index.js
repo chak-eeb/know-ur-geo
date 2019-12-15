@@ -1,7 +1,8 @@
 // start the game
 const startBtn = document.getElementById('start');
 const correct = document.querySelector('.correct');
-let counter = document.querySelector('.counter span').textContent;
+let counterVal = document.querySelector('.counter').textContent;
+let counter = 0;
 
 startBtn.addEventListener('click', start);
 const imagesArray = [
@@ -19,7 +20,6 @@ const imagesArray = [
 let randomIndex = Math.floor(Math.random() * 5);
 function start() {
 	console.log(randomIndex);
-
 	document.getElementById('pic').src = imagesArray[randomIndex];
 }
 
@@ -31,65 +31,43 @@ submitBtn.addEventListener('click', answer);
 
 function answer() {
 	const inputValue = document.getElementById('val').value;
-	console.log(imagesArray[randomIndex]);
-	console.log(inputValue);
-	console.log(counter);
+	if (
+		imagesArray[randomIndex] == '../images/china.jpg' &&
+		inputValue === 'china'
+	) {
+		correct.textContent = 'CORRECT';
+		correct.style.color = 'green';
+	} else if (
+		imagesArray[randomIndex] == '../images/brazil.svg' &&
+		inputValue === 'brazil'
+	) {
+		correct.textContent = 'CORRECT';
+		correct.style.color = 'green';
+	} else if (
+		imagesArray[randomIndex] == '../images/france.png' &&
+		inputValue === 'france'
+	) {
+		correct.textContent = 'CORRECT';
+		correct.style.color = 'green';
+	} else if (
+		imagesArray[randomIndex] == '../images/morocco.png' &&
+		inputValue === 'morocco'
+	) {
+		correct.textContent = 'CORRECT';
+		correct.style.color = 'green';
+	} else if (
+		imagesArray[randomIndex] == '../images/australia.jpeg' &&
+		inputValue === 'australia'
+	) {
+		correct.textContent = 'CORRECT';
+		correct.style.color = 'green';
+	} else {
+		correct.style.color = 'red';
+		correct.textContent = 'TRY AGAIN';
+	}
 
-	if (
-		inputValue == 'china' ||
-		imagesArray[randomIndex] == '../images/china.jpg'
-	) {
-		correct.textContent = 'CORRECT';
-		correct.style.color = 'green';
-		counter++;
-	} else {
-		correct.textContent = 'TRY AGAIN';
-		correct.style.color = 'red';
-	}
-	if (
-		inputValue == 'brazil' ||
-		imagesArray[randomIndex] == '../images/brazil.svg'
-	) {
-		correct.textContent = 'CORRECT';
-		correct.style.color = 'green';
-		counter++;
-	} else {
-		correct.textContent = 'TRY AGAIN';
-		correct.style.color = 'red';
-	}
-	if (
-		inputValue == 'france' ||
-		imagesArray[randomIndex] == '../images/france.png'
-	) {
-		correct.textContent = 'CORRECT';
-		correct.style.color = 'green';
-		counter++;
-	} else {
-		correct.textContent = 'TRY AGAIN';
-		correct.style.color = 'red';
-	}
-	if (
-		inputValue == 'morocco' ||
-		imagesArray[randomIndex] == '../images/morocco.png'
-	) {
-		correct.textContent = 'CORRECT';
-		correct.style.color = 'green';
-		counter++;
-	} else {
-		correct.textContent = 'TRY AGAIN';
-		correct.style.color = 'red';
-	}
-	if (
-		inputValue == 'australia' ||
-		imagesArray[randomIndex] == '../images/australia.jpeg'
-	) {
-		correct.textContent = 'CORRECT';
-		correct.style.color = 'green';
-		counter++;
-	} else {
-		correct.textContent = 'TRY AGAIN';
-		correct.style.color = 'red';
-	}
+	// if ((correct.textContent = 'CORRECT')) {
+	// 	counter++;
+	// 	counter = counterVal;
+	// }
 }
-
-//
